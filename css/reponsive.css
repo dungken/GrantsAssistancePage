@@ -1,0 +1,114 @@
+
+@media (max-width: 1199.98px) {
+    
+}
+
+@media (max-width: 991.98px) {
+  
+}
+
+@media (max-width: 767.98px) {
+  body {
+      font-size: 14px;
+  }
+
+  .hero-section .left-col {
+      gap: 1.3rem !important;
+  }
+  
+  .title-box h1.title{
+      font-size:30px !important;
+  }
+  
+  .hero-section .left-col .title-box .sub-title {
+      font-size: 20px !important;
+  }
+  
+  .hero-section .left-col .title-box-2 h2.title{
+      font-size:27px !important;
+  }
+
+  .logo-top-box{
+    margin-bottom: -17px !important;
+    margin-top: -16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+      font-size: 12px;
+    }
+
+    .hero-section {
+           .left-col {
+               .form-box {
+                   form {
+                      select {
+                         flex: 0 0 100%;
+                      }
+                  }
+              }
+          }
+      .right-col {
+          position: relative;
+          top: unset;
+          transform: translateY(-0%);
+          z-index: 0;
+          width: 100%;
+          margin-top: 2rem;
+      }
+  }
+  .do-we-section {
+      padding: 2.5rem 0; 
+      h2.title {
+          margin-bottom: 2rem;
+      }
+  }
+  .apply-section {
+      .content-box {
+         flex-direction: column;
+         h2.title {
+          line-height: 1.45;
+          text-align: left;
+          br {
+              display: none;
+          }
+         }
+      }
+  }
+  .step-section {
+      padding: 2.5rem 0;
+      .content-wrap {
+          padding: 1.5rem;
+          .content-box {
+              gap: 1rem;
+              padding: 1rem 0;
+          }
+      }
+  }
+
+  .customer-section {
+      padding: 2.5rem 0;
+      position: relative;
+  
+      .left-col {
+          position: relative;
+          img {
+              width: 100%;
+          }
+      }
+      .right-col {
+          .slide {
+              .slide-box 
+                  .slide-item {
+                      flex: 0 0 100%;
+                      padding: 1rem;
+                  }
+              }
+          }
+      }
+
+      .faq-section {
+          padding: 2.5rem 0;
+      }
+  }
