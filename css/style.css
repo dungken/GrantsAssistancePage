@@ -1380,6 +1380,13 @@ button:hover {
     border-radius: 50%;
 }
 
+.btn-continue {
+    width: 56%;
+}
+.btn-continue:hover {
+    background-color: #db9e2c !important;
+}
+
 .verified-success-image {
     max-width: 100%;
     height: auto;
@@ -1582,6 +1589,10 @@ button:hover {
 
     .feature-badge {
         padding: 4px 14px;
+    }
+
+    .btn-continue {
+        width: 100%;
     }
 }
 
