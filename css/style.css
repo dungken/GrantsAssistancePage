@@ -1159,7 +1159,7 @@ button:hover {
     display: flex;
     justify-content: start;
     gap: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     flex-wrap: wrap;
 }
 
@@ -1178,6 +1178,7 @@ button:hover {
     border-radius: 10px;
     /* Bo góc mềm mại */
     /* font-family: Arial, sans-serif; */
+    padding-bottom: 0;
 }
 
 .feature-badge {
