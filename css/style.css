@@ -1158,18 +1158,86 @@ button:hover {
 .features {
     display: flex;
     justify-content: start;
-    gap: 15px;
+    gap: 3px;
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
 .feature-badge {
-    background: rgba(0, 161, 155, 0.8);
+    /* background: rgba(0, 161, 155, 0.8); */
     padding: 10px 20px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.features {
+    /* background-color: #e9f9fd; */
+    /* Màu nền nhạt giống ảnh */
+    padding: 20px 0px;
+    border-radius: 10px;
+    /* Bo góc mềm mại */
+    /* font-family: Arial, sans-serif; */
+}
+
+.feature-badge {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 15px; */
+    /* Khoảng cách giữa các dòng */
+}
+
+.feature-badge:last-child {
+    margin-bottom: 0;
+    /* Xóa khoảng cách dưới cùng */
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: not-allowed;
+    /* Trỏ chuột hiển thị không được click */
+}
+
+.styled-checkbox {
+    appearance: none;
+    /* Xóa checkbox mặc định */
+    width: 25px;
+    height: 25px;
+    border: 2px solid #059aa0;
+    /* Viền màu xanh dương */
+    border-radius: 4px;
+    /* Bo góc cho checkbox */
+    background-color: white;
+    /* Nền trắng */
+    margin-right: 10px;
+    /* Khoảng cách giữa checkbox và text */
+    position: relative;
+}
+
+.styled-checkbox:checked {
+    background-color: #059196;
+    /* Nền xanh khi được check */
+}
+
+.styled-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.feature-badge span {
+    font-size: 18px;
+    /* Kích thước chữ */
+    color: #333;
+    /* Màu chữ */
+    font-weight: bold;
 }
 
 .check-icon {
@@ -1368,6 +1436,148 @@ button:hover {
     /* padding: 70px; */
 }
 
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-stars {
+    color: #00b67a;
+}
+
+.review-body {
+    margin-top: 10px;
+}
+
+.review-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.review-footer .btn {
+    padding: 5px 10px;
+    background-color: #fff;
+    font-size: 0.8rem;
+}
+
+#fomo {
+    display: flex;
+    position: fixed;
+    z-index: 99999;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 95%;
+    font-size: 14px;
+    animation: slideUp 0.5s ease forwards; /* Thêm hiệu ứng */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    top: 83%; /* Đẩy phần tử xuống 70% */
+    left: 50%;
+    transform: translate(-50%, 50%); /* Bắt đầu từ dưới (ẩn) */
+}
+
+/* Keyframes cho hiệu ứng */
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, 100%); /* Bắt đầu từ dưới */
+        opacity: 0; /* Ẩn */
+    }
+    100% {
+        transform: translate(-50%, -50%); /* Về vị trí giữa */
+        opacity: 1; /* Hiện */
+    }
+}
+
+#fomo .product_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#fomo .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#fomo .buyer {
+    line-height: 1.4;
+}
+
+#fomo .user_name {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+#fomo .location {
+    color: #555;
+    font-size: 15px;
+}
+
+#fomo .Boked .loanAmount {
+    color: green;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#fomo .time {
+    margin-top: 0px;
+    font-size: 12px;
+    color: #555;
+    font-size: 15px;
+}
+
+#fomo .time img {
+    width: 15px;
+    border-radius: 50%;
+    filter: hue-rotate(352deg) saturate(150%) brightness(120%);
+    position: relative;
+    top: 2px;
+    margin-left: 8px;
+}
+
+#fomo .time .number {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#fomo .time .type {
+    color: #555;
+    font-size: 15px;
+}
+
+#fomo .time span:last-child {
+    color: #00a8ff;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 4px;
+    font-size: 15px;
+}
+
 #proud-to-be-recognized-for-our-service img {
     width: 100%;
     padding: 10px;
@@ -1431,8 +1641,8 @@ button:hover {
 }
 
 .star-background .star-icon {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1445,7 +1655,7 @@ button:hover {
 }
 
 .star-background .star-icon:nth-child(5n) {
-    background: linear-gradient(to right, #00b67b 50%, #ccc 50%);
+    /* background: linear-gradient(to right, #00b67b 50%, #ccc 50%); */
 }
 
 .sc-slide-item {
@@ -1542,11 +1752,11 @@ button:hover {
     }
 
     .feature-badge span {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     .features {
-        justify-content: center !important;
+        /* justify-content: center !important; */
     }
 
     .object-content-box {

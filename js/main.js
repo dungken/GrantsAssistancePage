@@ -202,3 +202,92 @@ document.querySelectorAll(".faq-item").forEach((item) => {
         item.classList.toggle("active");
     });
 });
+
+// List of messages to show
+const messages = [
+    {
+        name: "Emily",
+        location: "Texas",
+        amount: "$10,000",
+        grant: "Unemployed Grant",
+    },
+    {
+        name: "John",
+        location: "Ohio",
+        amount: "$40,000",
+        grant: "Business Grant",
+    },
+    {
+        name: "Sarah",
+        location: "California",
+        amount: "$5,000",
+        grant: "Education Grant",
+    },
+    {
+        name: "David",
+        location: "Florida",
+        amount: "$82,000",
+        grant: "Housing Grant",
+    },
+    {
+        name: "Jessica",
+        location: "New York",
+        amount: "$8,000",
+        grant: "Unemployed Grant program",
+    },
+    {
+        name: "Maria",
+        location: "Illinois",
+        amount: "$115,000",
+        grant: "Business Grant program!",
+    },
+    {
+        name: "Christopher",
+        location: "Pennsylvania",
+        amount: "$6,000",
+        grant: "Education Grant program",
+    },
+    {
+        name: "Ashley",
+        location: "Arizona",
+        amount: "$75,000",
+        grant: "Housing Grant program",
+    },
+];
+
+let currentIndex = 0;
+
+// Function to show the popup
+function showPopup() {
+    const popup = document.getElementById("fomo");
+
+    // Update content dynamically
+    const currentMessage = messages[currentIndex];
+    popup.querySelector(".user_name").textContent = currentMessage.name;
+    popup.querySelector(".location").textContent = currentMessage.location;
+    popup.querySelector(".loanAmount").textContent = currentMessage.amount;
+    popup.querySelector(
+        ".Boked"
+    ).innerHTML = `was approved for a <span class="loanAmount">${currentMessage.amount}</span> from the ${currentMessage.grant}`;
+
+    // Show the popup
+    popup.style.display = "flex";
+
+    // Move to the next message
+    currentIndex = (currentIndex + 1) % messages.length;
+
+    // Hide the popup after 5 seconds
+    setTimeout(hidePopup, 5000);
+}
+
+// Function to hide the popup
+function hidePopup() {
+    const popup = document.getElementById("fomo");
+    popup.style.display = "none";
+
+    // Show the next popup after 5 seconds
+    setTimeout(showPopup, 5000);
+}
+
+// Start the popup cycle when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", showPopup);
