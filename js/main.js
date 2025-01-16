@@ -169,6 +169,7 @@ function runCounter(counter) {
     updateCount();
 }
 
+////////////////////////////
 // Reset the counter
 function resetCounter(counter) {
     counter.innerText = "0";
@@ -192,6 +193,8 @@ window.addEventListener("scroll", () => {
     });
 });
 
+//////////////////////////
+
 document.querySelectorAll(".faq-item").forEach((item) => {
     item.addEventListener("click", () => {
         // Đóng tất cả các mục khác
@@ -203,6 +206,7 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     });
 });
 
+/////////////////////////////////
 // List of messages to show
 const messages = [
     {
@@ -291,3 +295,21 @@ function hidePopup() {
 
 // Start the popup cycle when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", showPopup);
+
+/////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+    const firstSection = document.getElementById("first-section");
+    const stickyButton = document.getElementById("sticky-button");
+
+    window.addEventListener("scroll", function () {
+        const sectionBottom = firstSection.getBoundingClientRect().bottom;
+
+        // Thêm hoặc xóa class khi cuộn qua section đầu tiên
+        if (sectionBottom < 0) {
+            stickyButton.classList.add("active-sticky-button"); // Thêm class
+        } else {
+            stickyButton.classList.remove("active-sticky-button"); // Xóa class
+        }
+    });
+});
