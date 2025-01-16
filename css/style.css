@@ -111,6 +111,10 @@
     border-radius: 7px;
 }
 
+.glass-effect small {
+    font-size: 20px !important;
+}
+
 .shine-effect {
     position: relative;
     overflow: hidden;
@@ -1825,5 +1829,14 @@ label {
     .unemploy-icon {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    .glass-effect small {
+        font-size: 14px !important;
+    }
+
+    .sticky-button a {
+        padding: 30px 20px;
+        font-size: 16px;
     }
 }
