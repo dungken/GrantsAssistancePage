@@ -107,8 +107,8 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.07);
-    padding: 1.5rem;
-    border-radius: 7px;
+    padding: 0.5rem;
+    margin: 10px 100px;
 }
 
 .glass-effect small {
@@ -1113,9 +1113,9 @@ button:hover {
 
 @media screen and (max-width: 768px) {
     .glass-effect {
-        margin: 18px 0px;
-        margin-bottom: 4px;
-        padding: 11px;
+        margin: 10px 8px;
+        /* margin-bottom: 4px; */
+        padding: 10px 7px;
         font-size: 3vw;
     }
 
@@ -1173,8 +1173,8 @@ button:hover {
 .features {
     display: flex;
     justify-content: start;
-    gap: 3px;
-    margin-bottom: 0;
+    /* gap: 3px; */
+    margin: 24px 0px;
     flex-wrap: wrap;
 }
 
@@ -1187,13 +1187,9 @@ button:hover {
     gap: 10px;
 }
 .features {
-    /* background-color: #e9f9fd; */
-    /* Màu nền nhạt giống ảnh */
-    padding: 20px 0px;
+    background-color: #ffff;
+    padding: 20px 10px;
     border-radius: 10px;
-    /* Bo góc mềm mại */
-    /* font-family: Arial, sans-serif; */
-    padding-bottom: 0;
 }
 
 .feature-badge {
@@ -1222,7 +1218,7 @@ label {
     height: 25px;
     border: 2px solid #059aa0;
     /* Viền màu xanh dương */
-    border-radius: 4px;
+    border-radius: 20px;
     /* Bo góc cho checkbox */
     background-color: white;
     /* Nền trắng */
@@ -1836,7 +1832,8 @@ label {
     }
 
     .sticky-button a {
-        padding: 30px 20px;
-        font-size: 16px;
+        padding: 16px;
+        font-size: 25px;
+        border-radius: 11px !important;
     }
 }
