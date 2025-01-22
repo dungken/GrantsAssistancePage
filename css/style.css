@@ -108,11 +108,14 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.07);
     padding: 0.5rem;
-    margin: 10px 100px;
+    margin: 10px 130px;
 }
 
 .glass-effect small {
-    font-size: 20px !important;
+    font-size: 18px !important;
+}
+.glass-effect i {
+    font-size: 18px !important;
 }
 
 .shine-effect {
@@ -1114,9 +1117,11 @@ button:hover {
 @media screen and (max-width: 768px) {
     .glass-effect {
         margin: 10px 8px;
-        /* margin-bottom: 4px; */
         padding: 10px 7px;
         font-size: 3vw;
+    }
+    .glass-effect i {
+        font-size: 12px;
     }
 
     .shine-effect {
@@ -1180,7 +1185,7 @@ button:hover {
 
 .feature-badge {
     /* background: rgba(0, 161, 155, 0.8); */
-    padding: 10px 20px;
+    padding: 5px 8px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -1213,17 +1218,12 @@ label {
 
 .styled-checkbox {
     appearance: none;
-    /* Xóa checkbox mặc định */
-    width: 25px;
-    height: 25px;
+    width: 16px;
+    height: 16px;
     border: 2px solid #059aa0;
-    /* Viền màu xanh dương */
     border-radius: 20px;
-    /* Bo góc cho checkbox */
     background-color: white;
-    /* Nền trắng */
-    margin-right: 10px;
-    /* Khoảng cách giữa checkbox và text */
+    margin-right: 5px;
     position: relative;
 }
 
@@ -1235,21 +1235,21 @@ label {
 .styled-checkbox:checked::after {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 8px;
-    width: 6px;
-    height: 10px;
+    top: 2px;
+    left: 4px;
+    width: 5px;
+    height: 7px;
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0px 2px 2px 0;
     transform: rotate(45deg);
 }
 
 .feature-badge span {
-    font-size: 18px;
+    font-size: 16px;
     /* Kích thước chữ */
     color: #333;
     /* Màu chữ */
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .check-icon {
@@ -1712,6 +1712,11 @@ label {
     }
 }
 
+@media (max-width: 1024px) {
+    .glass-effect {
+        margin: 10px 45px;
+    }
+}
 @media (max-width: 768px) {
     .hero-gradient {
         background: #fff;
@@ -1764,7 +1769,7 @@ label {
     }
 
     .feature-badge span {
-        font-size: 4vw;
+        font-size: 2vw;
     }
 
     .features {
@@ -1794,6 +1799,8 @@ label {
 
     .shine-effect span.secure-span {
         font-size: 25px;
+        text-align: left;
+        margin-left: 12px;
     }
 
     .title-desc {
@@ -1828,12 +1835,56 @@ label {
     }
 
     .glass-effect small {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 
     .sticky-button a {
         padding: 16px;
         font-size: 25px;
         border-radius: 11px !important;
+    }
+
+    .shine-effect span.secure-span {
+        font-size: 22px;
+        text-align: center;
+        /* margin-left: 12px; */
+    }
+
+    .feature-badge span {
+        font-size: 4vw;
+    }
+
+    .glass-effect {
+        margin: 5px 11px;
+    }
+}
+
+@media (max-width: 320px) {
+    .glass-effect {
+        margin: 3px 10px;
+        padding: 2px 10px;
+    }
+    .glass-effect i {
+        margin: 4px 0px 7px 0px;
+    }
+
+    .glass-effect small {
+        font-size: 10px !important;
+    }
+
+    .sticky-button a {
+        padding: 14px 30px;
+        font-size: 19px;
+    }
+    .shine-effect span.secure-span {
+        font-size: 18px;
+    }
+
+    .active-sticky-button a {
+        font-size: 16px !important;
+        padding: 10px 3px 14px 3px !important;
+    }
+    .feature-badge span {
+        font-size: 5vw;
     }
 }
